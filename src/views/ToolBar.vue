@@ -1,5 +1,6 @@
 <template>
   <v-app>
+
     <v-app-bar
       app
       color="primary"
@@ -44,12 +45,7 @@
 </template>
 
 <script>
-
 export default {
-  name: 'App',
 
-  data: () => ({
-    //
-  })
 }
 </script>
