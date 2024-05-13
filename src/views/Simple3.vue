@@ -1,41 +1,42 @@
 <template>
   <div>
-    <h1>Welcome to Grade Page</h1>
+    <h1>Welcome to score Page</h1>
     <v-flex>
       <v-text-field
-      v-model="grade"
-      label="Your Grade"
+      v-model="score"
+      label="Your score"
       prepend-icon="mdi-hand-pointing-right"
-      id="grade"
+      id="score"
       type="number"
       ></v-text-field>
     </v-flex>
-    <v-btn type="submit" @click="calGrade()">Submit</v-btn>
+    <v-btn type="submit" @click="calscore()">Submit</v-btn>
     <h1></h1>
 
   </div>
 </template>
 <script>
+import swal from 'sweetalert2'
 export default {
   data () {
     return {
-      grade: 0
+      score: 0
     }
   },
   methods: {
-    calGrade () {
-      if (this.grade < 50) {
-        return alert(this.grade + ' result: F')
-      } else if (this.grade < 60) {
-        return alert(this.grade + ' result: D')
-      } else if (this.grade < 70) {
-        return alert(this.grade + ' result: C')
-      } else if (this.grade < 80) {
-        return alert(this.grade + ' result: B')
-      } else if (this.grade <= 100) {
-        return alert(this.grade + ' result: A')
+    calscore () {
+      if (this.score < 50) {
+        return swal.fire(this.score + ' result: F')
+      } else if (this.score < 60) {
+        return swal.fire(this.score + ' result: D')
+      } else if (this.score < 70) {
+        return swal.fire(this.score + ' result: C')
+      } else if (this.score < 80) {
+        return swal.fire(this.score + ' result: B')
+      } else if (this.score <= 100) {
+        return swal.fire(this.score + ' result: A')
       } else {
-        return alert('this grade out of limit\n Please Add number \'0-100\'')
+        return swal.fire('this score out of limit\n Please Add number \'0-100\'')
       }
     }
   }

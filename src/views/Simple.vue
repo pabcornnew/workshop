@@ -11,6 +11,8 @@
   </div>
 </template>
 <script>
+import swal from 'sweetalert2'
+
 export default {
   data () {
     return {
@@ -20,7 +22,9 @@ export default {
     }
   },
   methods: {
-    showswitch () { alert('Hello World') }
+    showswitch () {
+      swal.fire('Hello Vue world!!!')
+    }
   }
 }
 </script>
