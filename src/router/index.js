@@ -4,6 +4,8 @@ import HomeView from '../views/HomeView.vue'
 import Simple2 from '../views/Simple2.vue'
 import Simple3 from '../views/Simple3.vue'
 import Simple4 from '../views/Simple4.vue'
+import Simple5 from '../views/Simple5.vue'
+import callSim from '../views/callSim.vue'
 // import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
@@ -51,6 +53,16 @@ const routes = [
         path: '/simple4',
         name: 'simple4',
         component: Simple4
+      },
+      {
+        path: '/simple5',
+        name: 'simple5',
+        component: Simple5
+      },
+      {
+        path: '/callsim',
+        name: 'callsim',
+        component: callSim
       }
     ]
   }
