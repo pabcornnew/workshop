@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Simple2 from '../views/Simple2.vue'
 // import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
@@ -30,9 +31,14 @@ const routes = [
         component: () => import('../views/meView.vue')
       },
       {
-        path: '/carimp',
-        name: 'me',
-        component: () => import('../views/meView.vue')
+        path: '/simple',
+        name: 'simple',
+        component: () => import('../views/Simple.vue')
+      },
+      {
+        path: '/simple2',
+        name: 'simple2',
+        component: Simple2
       }
     ]
   }

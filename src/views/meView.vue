@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid=true style="background-image: url('../../public/pictures/Focal-Fossa_GREY.jpg')">
     <v-row dense>
       <v-col>
         <h2 style="text-align: center;">Profile</h2>
