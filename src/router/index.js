@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Simple2 from '../views/Simple2.vue'
+import Simple3 from '../views/Simple3.vue'
 // import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
@@ -39,6 +40,11 @@ const routes = [
         path: '/simple2',
         name: 'simple2',
         component: Simple2
+      },
+      {
+        path: '/simple3',
+        name: 'simple3',
+        component: Simple3
       }
     ]
   }

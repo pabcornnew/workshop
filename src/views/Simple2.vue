@@ -17,6 +17,7 @@
         id="password"
         ></v-text-field>
     </v-flex>
+    <v-btn @click="signin">Sign In</v-btn>
   </div>
 </template>
 <script>
