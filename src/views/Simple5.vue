@@ -19,7 +19,7 @@
 <script>
 import simcom from './Simple4.vue'
 import { EventBus } from '@/EventBus'
-// import CallSim from './callSim.vue'
+// import CallSim from './callSim.vue'*
 
 export default {
   components: {
