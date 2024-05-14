@@ -6,6 +6,7 @@ import Simple3 from '../views/Simple3.vue'
 import Simple4 from '../views/Simple4.vue'
 import Simple5 from '../views/Simple5.vue'
 import callSim from '../views/callSim.vue'
+import ApiCheck from '../views/ApiCheck.vue'
 // import { component } from 'vue/types/umd'
 
 Vue.use(VueRouter)
@@ -63,6 +64,11 @@ const routes = [
         path: '/callsim',
         name: 'callsim',
         component: callSim
+      },
+      {
+        path: '/apicheck',
+        name: 'apicheck',
+        component: ApiCheck
       }
     ]
   }
