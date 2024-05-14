@@ -1,34 +1,62 @@
 <template>
+  <div>
     <div>
-        <h2>API CONNECT</h2>
-        <v-btn @click="getData()">Connect</v-btn>
+      <h1>API CONNET</h1>
+        <!-- <h2>{{ apidata }}</h2> -->
+        <v-btn class="mb-3" color="success" @click="getData()">callapi</v-btn>
     </div>
+    <v-row>
+      <v-col cols="3" v-for="(item, index) in apidata" :key="index">
+        <v-card width="350">
+          <v-img src="../assets/fatcat.jpeg"></v-img>
+          <v-card-title primary-title>
+            <span>{{ item.username }}</span>
+            <span>{{ item.first_name }} {{ item.last_name }}</span>
+          </v-card-title>
+        </v-card>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
 export default {
   data () {
     return {
+      //   apidata: [],
       id: '',
       apidata: [],
       postdata: {
         username: '',
         password: '',
-        name: ''
+        first_name: '',
+        last_name: '',
+        age: 0,
+        grant_access: 'false'
       },
-      postdefault: {
+      postdatafault: {
         username: '',
         password: '',
-        name: ''
+        first_name: '',
+        last_name: '',
+        age: 0,
+        grant_access: 'false'
       }
     }
   },
   methods: {
-    getData () {
-      this.axios.get('http://localhost:3000/users').then((response) => {
-        console.log(response.data)
-      })
+    async getData () {
+      try {
+        const data = await this.axios.get('http://localhost:3000/users')
+        console.log(data)
+        this.apidata = data.data
+      } catch (error) {
+        alert(error.message)
+      }
     }
   }
 }
 </script>
+
+<style>
+</style>
