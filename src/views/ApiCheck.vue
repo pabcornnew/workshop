@@ -6,12 +6,13 @@
         <v-btn class="mb-3" color="success" @click="getData()">callapi</v-btn>
     </div>
     <v-row>
-      <v-col cols="3" v-for="(item, index) in apidata" :key="index">
-        <v-card width="350">
+      <v-col cols="4" v-for="(item, index) in apidata" :key="index">
+        <v-card width="400">
           <v-img src="../assets/fatcat.jpeg"></v-img>
           <v-card-title primary-title>
-            <span>{{ item.username }}</span>
-            <span>{{ item.first_name }} {{ item.last_name }}</span>
+            <span>User Name: {{ item.username }}</span>
+            <span>Name: {{ item.first_name }} {{ item.last_name }}</span>
+            <span>Age: {{ item.age }}</span>
           </v-card-title>
         </v-card>
       </v-col>
@@ -47,9 +48,8 @@ export default {
   methods: {
     async getData () {
       try {
-        const data = await this.axios.get('http://localhost:3000/users')
-        console.log(data)
-        this.apidata = data.data
+        const gotdata = await this.axios.get('http://localhost:3000/users')
+        this.apidata = gotdata.data
       } catch (error) {
         alert(error.message)
       }
